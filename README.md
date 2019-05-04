@@ -14,7 +14,7 @@ The instructions in this document will assume you are using an Arduino Uno as a 
 Wiring
 ------
 
-Before wiring, make sure both the programmer and MK3 are not connected to anything via USB.  Also disconnect the power from the MK3.
+Before wiring, make sure both the programmer and MK3 are not connected to anything via USB.  Also disconnect the power from the MK3.  During this procedure the programmer will power the 32u2, so it is not necessary to power the MK3 on until flashing is complete.
 
 The image and table below demonstrates how to hook up the Arduino Uno to the Einsy Rambo:
 
@@ -79,7 +79,7 @@ This will flash the firmware and reset the fuses back to their default state.  N
 
 Verify the installation
 -----------------------
-Unplug your programmer and connect your MK3 to the Pi via USB.  Run:
+Remove the programmer's jumper connections from the Einsy, connect your MK3 to the Pi via USB, and restore power to the MK3.  Run:
 
 ```
 dmesg | tail
