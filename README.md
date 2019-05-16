@@ -1,6 +1,6 @@
 # mk3-32u2-firmware
 
-DFU and USB Serial firmware for Arduino based devices that use an Atmel 8/16/32u2 MCU as a usb to serial bridge.  All firmware in this repository is built against LUFA (C) Dean Camera, pulled on 12-28-2018.
+DFU and USB Serial firmware for Arduino based devices that use an Atmel 8/16/32u2 MCU as a usb to serial bridge.  This firmware addresses USB disconnection issues commonly seen with the Prusa i3 MK3.  All source in this repository is built against LUFA (C) Dean Camera, pulled on 12-28-2018.
 
 The hoodserial usb firmware in this repository is a port from Nico Hood's Hoodloader2.  The original fastserial implementation is courtesy of Urja Rannikko.
 
