@@ -11,6 +11,8 @@ You will need a programmer to install the firmware using the instructions below.
 
 The instructions in this document will assume you are using an Arduino Uno as a programmer, in which case you will need an Uno and 6 dupont jumpers (3 male to female, 3 female to female).  To set up an Arduino Uno as a programmer you need to upload the ArduinoISP sketch in the Arudino Examples.  See the [linked tutorial](https://www.arduino.cc/en/tutorial/arduinoISP) for more information.
 
+This document assumes that you are connecting your programmer to a Linux machine, such as a Raspberry Pi.
+
 Wiring
 ------
 
@@ -40,7 +42,7 @@ If using a dedicated programmer the information above may be used as a refereren
 | Pin 7 | SCK | Pin 3 |
 | Pin 9 | MISO | Pin 1|
 
-Now you are ready to connect your programmer/Arduino to USB.  This document will assume you are connecting to a Raspberry Pi.
+Now you are ready to connect your programmer/Arduino to USB.
 
 Backing up the Atmega32u2
 --------------------------
@@ -72,7 +74,7 @@ Now fetch and flash the firmware:
 
 ```
 wget https://raw.githubusercontent.com/PrusaOwners/mk3-32u2-firmware/master/hex_files/DFU-hoodserial-combined-PrusaMK3-32u2.hex
-avrdude -p m32u2 -F -P /dev/ttyACM0 -b 19200 -c avrisp -U flash:w:DFU-hoodserial-combined-PrusaMK3-32u2.hex -U lfuse:w:0xFF:m -U hfuse:w:0xD9:m -U efuse:w:0xF4:m -U lock:w:0xCF:m
+avrdude -p m32u2 -F -P /dev/ttyACM0 -b 19200 -c avrisp -U flash:w:DFU-hoodserial-combined-PrusaMK3-32u2.hex -U lfuse:w:0xFF:m -U hfuse:w:0xD9:m -U efuse:w:0xF4:m
 ```
 
 This will flash the firmware and reset the fuses back to their default state.  Note that high fuse is reset with the EESAVE bit disabled, so a reflash would erase EEPROM unless the high fuse is set back to 0xD1 first.
