@@ -9,7 +9,7 @@ Pre-requisites
 
 You will need a programmer to install the firmware using the instructions below.  It is also possible to flash the usbserial firmware using DFU mode, however it requires pulling the HWB pin on the Atmega32u2 to ground, which is beyond the scope of this document.
 
-The instructions in this document will assume you are using an Arduino Uno as a programmer, in which case you will need an Uno and 6 dupont jumpers (3 male to female, 3 female to female).  To set up an Arduino Uno as a programmer you need to upload the ArduinoISP sketch in the Arudino Examples.  See the [linked tutorial](https://www.arduino.cc/en/tutorial/arduinoISP) for more information.
+The instructions in this document will assume you are using an Arduino Uno as a programmer, in which case you will need an Uno and 6 dupont jumpers (3 male to female, 3 female to female).  To set up an Arduino Uno as a programmer you need to upload the ArduinoISP sketch in the Arudino Examples.  See the [linked tutorial](https://docs.arduino.cc/built-in-examples/arduino-isp/ArduinoISP/) for more information.
 
 This document assumes that you are connecting your programmer to a Linux machine, such as a Raspberry Pi.
 
